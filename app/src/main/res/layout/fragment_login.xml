@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.LoginFragment">
+
+    <ProgressBar
+        android:id="@+id/progress_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/passworduserLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/marginTopmid"
+        tools:visibility="visible"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/correoLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartEnd"
+        android:layout_marginTop="@dimen/marginTopmid"
+        android:layout_marginEnd="@dimen/marginStartEnd"
+        android:hint="Email"
+        android:textAllCaps="false"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/passworduserLogin"
+        app:layout_constraintTop_toBottomOf="@+id/textNameLogin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passworduserLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopmid"
+        android:hint="Password"
+        android:textAllCaps="false"
+        android:textColorHint="@color/gris"
+        app:boxStrokeColor="@color/gris"
+        app:endIconCheckable="true"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/correoLogin"
+        app:layout_constraintStart_toStartOf="@+id/correoLogin"
+        app:layout_constraintTop_toBottomOf="@id/correoLogin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/iniciosesion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/skyblue_light"
+        android:text="Login"
+        android:layout_marginTop="@dimen/marginTopmid"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/passworduserLogin"
+        app:layout_constraintEnd_toEndOf="@+id/passworduserLogin"
+        app:layout_constraintStart_toStartOf="@+id/passworduserLogin" />
+
+    <TextView
+        android:id="@+id/textNameLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jimena Hernandez"
+        android:layout_marginTop="@dimen/marginMax"
+        android:layout_marginBottom="@dimen/marginTopMax"
+        android:textColor="@color/black"
+        android:textSize="@dimen/titlemax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/correoLogin" />
+
+    <TextView
+        android:id="@+id/textEmailforLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Her21199@uvg.edu.gt"
+        android:textColor="@color/black"
+        android:textSize="@dimen/titlemid"
+        android:layout_marginBottom="@dimen/marginTopMax"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

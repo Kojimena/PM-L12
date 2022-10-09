@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.HomeFragment">
+
+    <Button
+        android:id="@+id/button_sesionActiva_homeLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/marginTopmin"
+        android:text="Mantener sesión activa"
+        android:layout_marginStart="@dimen/marginStartEndmin"
+        android:layout_marginEnd="@dimen/marginStartEndmin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_cerrarSesion_homeLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopmin"
+        android:text="Cerrar sesión"
+        android:layout_marginStart="@dimen/marginStartEndmin"
+        android:layout_marginEnd="@dimen/marginStartEndmin"
+        app:layout_constraintBottom_toTopOf="@+id/button_default_homeLayout"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/button_sesionActiva_homeLayout" />
+
+    <Button
+        android:id="@+id/button_default_homeLayout"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopmin"
+        android:text="Default"
+
+        app:layout_constraintStart_toStartOf="@+id/button_cerrarSesion_homeLayout"
+
+        app:layout_constraintTop_toBottomOf="@+id/button_cerrarSesion_homeLayout" />
+
+    <Button
+        android:id="@+id/button_succes_homeLayout"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopmin"
+        android:text="Succes"
+        android:layout_marginStart="2dp"
+        app:layout_constraintStart_toEndOf="@+id/button_default_homeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/button_cerrarSesion_homeLayout" />
+
+    <Button
+        android:id="@+id/button_failure_homeLayout"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopmin"
+        android:layout_marginStart="2dp"
+        android:text="Failure"
+        app:layout_constraintStart_toEndOf="@+id/button_succes_homeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/button_cerrarSesion_homeLayout" />
+
+    <Button
+        android:id="@+id/button_empty_homeLayout"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopmin"
+        android:layout_marginStart="2dp"
+        android:text="Empty"
+        app:layout_constraintEnd_toEndOf="@+id/button_cerrarSesion_homeLayout"
+        app:layout_constraintStart_toEndOf="@+id/button_failure_homeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/button_cerrarSesion_homeLayout" />
+
+
+    <ImageView
+        android:id="@+id/image_homeLayout"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginTopmin"
+
+        app:layout_constraintTop_toBottomOf="@+id/button_empty_homeLayout"
+        app:layout_constraintBottom_toTopOf="@id/text_status_homeLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        tools:srcCompat="@tools:sample/avatars"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/text_status_homeLayout"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/image_homeLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        tools:text="Selecciona una opcion"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_homeLayout"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/button_empty_homeLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
