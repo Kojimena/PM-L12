@@ -69,7 +69,7 @@ class LoginFragment : Fragment() {
                             progressUsers.visibility = View.GONE
                             iniciosesion.visibility = View.VISIBLE
                         }
-                        Toast.makeText(requireContext(), "Error al iniciar sesión", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), "Error de autenticación", Toast.LENGTH_SHORT).show()
                     }
                     is SessionViewModel.loggedStatus.checkinglogin -> {
                         binding.apply {

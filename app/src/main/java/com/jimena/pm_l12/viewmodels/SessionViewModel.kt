@@ -38,6 +38,7 @@ class SessionViewModel : ViewModel() {
 
         _logged.value = loggedStatus.checkinglogin
         viewModelScope.launch {
+            //delay de 2 segundos para simular el tiempo de respuesta del servidor
             delay(2000)
             if (username == "Her21199@uvg.edu.gt" && password == "Her21199@uvg.edu.gt"){
                 _logged.value = loggedStatus.logged
@@ -49,7 +50,7 @@ class SessionViewModel : ViewModel() {
     }
 
     fun waitingTime(){
-        viewModelScope.launch {
+       job = viewModelScope.launch { //asignamos la tarea a una variable para poder cancelarla
             delay(20000L)
             _validAuthToken.value = false
             _logged.value = loggedStatus.notLogged
@@ -57,11 +58,13 @@ class SessionViewModel : ViewModel() {
     }
 
     fun keepSessionActive(){
-        if (this::job.isInitialized && job.isActive) {
+        if (this::job.isInitialized && job.isActive) { //si la tarea esta activa la cancelamos
             job.cancel()
-            _logged.value = loggedStatus.notLogged
+            _logged.value = loggedStatus.notLogged //si se cancela la tarea, se vuelve a poner el estado a notLogged
 
         }
+
+
     }
 
 }

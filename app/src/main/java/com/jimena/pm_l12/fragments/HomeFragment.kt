@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -220,6 +221,8 @@ class HomeFragment : Fragment() {
         binding.apply {
             //Acá se asignan los listeners a los botones
             buttonSesionActivaHomeLayout.setOnClickListener {
+                //hacer un toast mensaje de sesion activa
+                Toast.makeText(requireContext(), "La sesión se mantendrá activa", Toast.LENGTH_SHORT).show()
                 //mantener la sesión activa
                 sessionViewModel.keepSessionActive()
             }
