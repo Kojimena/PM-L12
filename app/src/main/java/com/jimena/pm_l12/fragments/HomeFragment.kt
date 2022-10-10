@@ -42,11 +42,12 @@ class HomeFragment : Fragment() {
 
     private fun setObservers() {
         //Aqui se observa el livedata del viewmodel y se actualiza la UI
-        homeViewModel.startTimer()
+        homeViewModel.startTimer() //Iniciamos el timer
+
         lifecycleScope.launch{
             lifecycleScope.launch{
                 sessionViewModel.validAuthToken.collectLatest { valueToken ->
-                    if (!valueToken && homeViewModel.timer.value == 0) {
+                    if (!valueToken && homeViewModel.timer.value == 0) { //Si el token no es valido y el timer ha llegado a 0
                         requireView().findNavController().navigate(
                             R.id.action_homeFragment_to_loginFragment
                         )
@@ -233,21 +234,21 @@ class HomeFragment : Fragment() {
                     .navigate(R.id.action_homeFragment_to_loginFragment)
             }
             buttonDefaultHomeLayout.setOnClickListener{
-                homeViewModel.Defaultfunc()
+                homeViewModel.defaultfunc()
             }
 
             buttonSuccesHomeLayout.setOnClickListener {
-                homeViewModel.Succesfunc()
+                homeViewModel.succesfunc()
             }
 
             buttonFailureHomeLayout.setOnClickListener {
 
-                homeViewModel.Failurefunc()
+                homeViewModel.failurefunc()
             }
 
             buttonEmptyHomeLayout.setOnClickListener {
 
-                homeViewModel.Emptyfunc()
+                homeViewModel.emptyfunc()
             }
 
         }

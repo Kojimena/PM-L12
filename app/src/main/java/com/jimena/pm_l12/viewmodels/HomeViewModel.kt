@@ -30,11 +30,11 @@ class HomeViewModel : ViewModel(){
 
     class Constants { //Definimos los mensajes que se mostrarán en la pantalla
         companion object{
+            const val DEFAULT_TIMER = 1
             const val DEFAULT_MESSG = "Selecciona una opción"
             const val SUCCES_MESSG = "¡Operación exitosa!"
             const val FAILURE_MESSG = "¡Operación fallida!"
             const val EMPTY_MESSG = "Sin resultados"
-            const val DEFAULT_TIMER = 1
         }
     }
 
@@ -46,30 +46,30 @@ class HomeViewModel : ViewModel(){
         }
     }
 
-    fun progressBarActualization(){
-        viewModelScope.launch { //Se ejecuta en un hilo secundario
+    private fun progressBarActualization(){
+        viewModelScope.launch {
             _progessBar.value = true //Se muestra la barra de progreso
             delay(2000L) //Se espera 2 segundos
             _progessBar.value = false //Se oculta la barra de progreso
         }
     }
 
-    fun Defaultfunc(){ //Función que se ejecuta al presionar el botón de "Default"
+    fun defaultfunc(){ //Función que se ejecuta al presionar el botón de "Default"
         progressBarActualization()
         _status.value = Status.default(Constants.DEFAULT_MESSG)
     }
 
-    fun Succesfunc(){ //Función que se ejecuta al presionar el botón de "Succes"
+    fun succesfunc(){ //Función que se ejecuta al presionar el botón de "Succes"
         progressBarActualization()
         _status.value = Status.succes(Constants.SUCCES_MESSG)
     }
 
-    fun Failurefunc(){ //Función que se ejecuta al presionar el botón de "Failure"
+    fun failurefunc(){ //Función que se ejecuta al presionar el botón de "Failure"
         progressBarActualization()
         _status.value = Status.failure(Constants.FAILURE_MESSG)
     }
 
-    fun Emptyfunc(){ //Función que se ejecuta al presionar el botón de "Empty"
+    fun emptyfunc(){ //Función que se ejecuta al presionar el botón de "Empty"
         progressBarActualization()
         _status.value = Status.empty(Constants.EMPTY_MESSG)
     }

@@ -11,9 +11,10 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/skyblue_darker"
 
         android:layout_marginTop="@dimen/marginTopmin"
-        android:text="Mantener sesión activa"
+        android:text="@string/activeSession_fragmenthome"
         android:layout_marginStart="@dimen/marginStartEndmin"
         android:layout_marginEnd="@dimen/marginStartEndmin"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,11 +24,12 @@
 
     <Button
         android:id="@+id/button_cerrarSesion_homeLayout"
+        android:backgroundTint="@color/skyblue_darker"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTopmin"
-        android:text="Cerrar sesión"
+        android:text="@string/closeSession_fragmenthome"
         android:layout_marginStart="@dimen/marginStartEndmin"
         android:layout_marginEnd="@dimen/marginStartEndmin"
         app:layout_constraintBottom_toTopOf="@+id/button_default_homeLayout"
@@ -39,10 +41,11 @@
 
     <Button
         android:id="@+id/button_default_homeLayout"
+        android:backgroundTint="@color/skyblue_main"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTopmin"
-        android:text="Default"
+        android:text="@string/default_fragmenthome"
         android:textAllCaps="false"
         android:textSize="@dimen/titlemin"
         app:layout_constraintStart_toStartOf="@+id/button_cerrarSesion_homeLayout"
@@ -52,11 +55,12 @@
 
     <Button
         android:id="@+id/button_succes_homeLayout"
+        android:backgroundTint="@color/skyblue_main"
 
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTopmin"
-        android:text="Success"
+        android:text="@string/success__fragmenthome"
         android:textAllCaps="false"
         android:textSize="@dimen/titlemin"
         android:layout_marginStart="@dimen/separationButton"
@@ -66,12 +70,13 @@
 
     <Button
         android:id="@+id/button_failure_homeLayout"
+        android:backgroundTint="@color/skyblue_main"
 
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTopmin"
         android:layout_marginStart="@dimen/separationButton"
-        android:text="Failure"
+        android:text="@string/failure__fragmenthome"
         android:textAllCaps="false"
         android:textSize="@dimen/titlemin"
         app:layout_constraintEnd_toStartOf="@id/button_empty_homeLayout"
@@ -80,12 +85,13 @@
 
     <Button
         android:id="@+id/button_empty_homeLayout"
+        android:backgroundTint="@color/skyblue_main"
 
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/separationButton"
         android:layout_marginTop="@dimen/marginTopmin"
-        android:text="Empty"
+        android:text="@string/empty__fragmenthome"
         android:textAllCaps="false"
         android:textSize="@dimen/titlemin"
         app:layout_constraintStart_toEndOf="@id/button_failure_homeLayout"
@@ -104,6 +110,7 @@
         app:layout_constraintBottom_toTopOf="@id/text_status_homeLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/imagen_de_estado_fragmenthome"
 
         tools:srcCompat="@tools:sample/avatars"
         app:layout_constraintVertical_chainStyle="packed"

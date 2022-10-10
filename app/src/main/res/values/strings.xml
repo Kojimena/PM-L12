@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PM-L12</string>
+    <string name="email_fragmentlogin">Email</string>
+    <string name="password_fragmentlogin">Password</string>
+    <string name="login_fragmentlogin">Login</string>
+    <string name="nameTitle_fragmentlogin">Jimena Hernandez</string>
+    <string name="emailLogin_fragmentlogin">Her21199@uvg.edu.gt</string>
+    <string name="activeSession_fragmenthome">Mantener sesión activa</string>
+    <string name="closeSession_fragmenthome">Cerrar sesión</string>
+    <string name="default_fragmenthome">Default</string>
+    <string name="success__fragmenthome">Success</string>
+    <string name="failure__fragmenthome">Failure</string>
+    <string name="empty__fragmenthome">Empty</string>
+    <string name="imagen_de_estado_fragmenthome">Imagen de estado</string>
 </resources>
