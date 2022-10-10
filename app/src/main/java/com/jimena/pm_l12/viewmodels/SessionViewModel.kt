@@ -51,7 +51,8 @@ class SessionViewModel : ViewModel() {
 
     fun waitingTime(){
        job = viewModelScope.launch { //asignamos la tarea a una variable para poder cancelarla
-            delay(20000L)
+            //delay de 30 segundos para simular el tiempo de espera del servidor
+            delay(30000)
             _validAuthToken.value = false
             _logged.value = loggedStatus.notLogged
         }

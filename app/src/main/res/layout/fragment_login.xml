@@ -102,8 +102,8 @@
         android:textColor="@color/black"
         android:textSize="@dimen/titlemid"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/iniciosesion"
-        app:layout_constraintStart_toStartOf="@+id/iniciosesion" />
+        app:layout_constraintEnd_toEndOf="@+id/passworduserLogin"
+        app:layout_constraintStart_toStartOf="@+id/passworduserLogin" />
 
 
 
