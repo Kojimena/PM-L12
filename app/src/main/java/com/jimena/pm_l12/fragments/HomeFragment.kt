@@ -41,20 +41,23 @@ class HomeFragment : Fragment() {
 
     private fun setObservers() {
         //Aqui se observa el livedata del viewmodel y se actualiza la UI
+        homeViewModel.startTimer()
         lifecycleScope.launch{
- /*           sessionViewModel.validAuthToken.collectLatest { valuetoken ->
-                    if(!valuetoken){
-                        view?.findNavController()?.navigate(R.id.action_homeFragment_to_loginFragment)
+            lifecycleScope.launch{
+                sessionViewModel.validAuthToken.collectLatest { valueToken ->
+                    if (!valueToken && homeViewModel.timer.value == 0) {
+                        requireView().findNavController().navigate(
+                            R.id.action_homeFragment_to_loginFragment
+                        )
                     }
-
                 }
-            }*/
-                homeViewModel.timer.collectLatest {
+            }
+                /*homeViewModel.timer.collectLatest {
                     if (it == 0 && !sessionViewModel.validAuthToken.value!!) {
                         requireView().findNavController()
                             .navigate(R.id.action_homeFragment_to_loginFragment)
                     }
-                }
+                }*/
 
         }
 

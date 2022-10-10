@@ -40,7 +40,8 @@ class HomeViewModel : ViewModel(){
 
     fun startTimer(){ //Función para iniciar el timer
         viewModelScope.launch {
-            delay(3000)
+            //delay de 10 segundos
+            delay(10000)
             _timer.value = 0
         }
     }
