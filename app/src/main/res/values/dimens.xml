@@ -12,5 +12,6 @@
     <dimen name="marginTopMax">60dp</dimen>
     <dimen name="paddingsizemid">25dp</dimen>
     <dimen name="marginMax">120dp</dimen>
-    <dimen name="marginStartEndmin">12dp</dimen>
+    <dimen name="marginStartEndmin">8dp</dimen>
+    <dimen name="separationButton">1dp</dimen>
 </resources>
