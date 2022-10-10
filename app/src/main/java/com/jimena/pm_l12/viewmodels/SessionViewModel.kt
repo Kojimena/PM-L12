@@ -62,7 +62,7 @@ class SessionViewModel : ViewModel() {
         if (this::job.isInitialized && job.isActive) { //si la tarea esta activa la cancelamos
             job.cancel()
             _logged.value = loggedStatus.notLogged //si se cancela la tarea, se vuelve a poner el estado a notLogged
-
+            _validAuthToken.value = true
         }
 
 
